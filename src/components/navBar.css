@@ -1,0 +1,131 @@
+.nav-main {
+    width: 100%;
+    height: 65px;
+    background-color: #F6A2AE;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.nav-link {
+    display: block;
+    width: 100%;
+    height: 35px;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    background-color: #F6A2AE;
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.2s;
+    visibility: visible;
+}
+
+.nav-link.cerrado {
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+}
+
+
+.contenedor-nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contenedor-logo-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo-svg {
+    width: 200px;
+    height: auto;
+}
+
+.contenedor-filtro {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 35px;
+}
+
+.contenedor-filtro {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 35px;
+}
+
+.filtro-logo-cerrar {
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+    stroke: aliceblue;
+    position: absolute;
+    transition: 0.2s;
+    transform: translateX(-15px) rotate(-90deg);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.filtro-logo-cerrar.activo {
+    transform: translateX(0) rotate(0deg);
+    visibility: visible;
+    opacity: 1;
+}
+
+.filtro-logo {
+    width: 35px;
+    height: auto;
+    fill: white;
+    cursor: pointer;
+    transition: 0.2s;
+    transform: translateX(0px) rotate(0deg);
+    visibility: visible;
+    opacity: 1;
+}
+
+.filtro-logo.oculto {
+    transform: translateX(-15px) rotate(-90deg);
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+.contenedor-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+.contenedor-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.contenedor-link a:hover {
+    color: black;
+    background-color: white;
+    padding-inline: 20px;
+    border-radius: 5px;
+}

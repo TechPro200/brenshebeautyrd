@@ -1,124 +1,18 @@
 import NavBar from "../components/navBar";
-
+import '../App.css'
 function LadingPages() {
     return (
         <>
             <NavBar />
 
-            <h1>
-                Aqui va todo
-            </h1>
-            <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1> <h1>
-                Aqui va todo
-            </h1>
+            <main className="contenedor-landing">
+                <div className="contenedor-slider">
+                    <div className="contendor-imagen">
+                        <img></img>
+                    </div>
+                </div>
+            </main>
+
         </>
 
     )

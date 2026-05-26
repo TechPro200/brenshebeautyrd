@@ -1,6 +1,12 @@
 /*Formato General*/
-body {
-    padding: 115px;
+main {
+    padding: 115px 35px;
 }
 
 /*--Formato Genera--*/
+
+/*LandingPages*/
+.contenedor-landing {
+    background: linear-gradient(180deg, rgba(233, 93, 37, 1) 5%, rgba(210, 60, 102, 1) 100%)
+}
+/*--LanginPages--*/
