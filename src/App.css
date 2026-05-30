@@ -1,12 +1,111 @@
 /*Formato General*/
 main {
-    padding: 115px 35px;
+    padding: 0;
+    width: 100%;
 }
 
 /*--Formato Genera--*/
 
 /*LandingPages*/
 .contenedor-landing {
-    background: linear-gradient(180deg, rgba(233, 93, 37, 1) 5%, rgba(210, 60, 102, 1) 100%)
+    background: linear-gradient(180deg, rgba(233, 93, 37, 1) 5%, rgba(210, 60, 102, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: auto;
+    padding-top: 100px;
 }
+
+.contenedor-slider {
+    position: relative;
+    background-color: aliceblue;
+    height: 30rem;
+    box-shadow: 12px 8px 14px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.contendor-imagen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-imagen-botones {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 25px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.contenedor-imagen-botones button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border: none;
+
+    background-color: white;
+    fill: black;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+    transform: scale(1);
+
+    pointer-events: all;
+}
+
+.contenedor-imagen-botones button:hover {
+    background-color: black;
+    fill: white;
+    transform: scale(1.1);
+}
+
+.imagen-slider {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+.imagen-slider.activo {
+    opacity: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .contenedor-landing {
+        padding-top: 80px;
+    }
+
+    .contenedor-slider {
+        height: 20rem;
+    }
+
+    .contenedor-imagen-botones {
+        padding-inline: 15px;
+    }
+
+    .contenedor-imagen-botones button {
+        width: 35px;
+        height: 35px;
+    }
+}
+
 /*--LanginPages--*/

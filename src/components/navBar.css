@@ -5,7 +5,9 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     padding: 10px;
+    overflow-x: hidden;
 }
 
 .nav-link {
@@ -20,6 +22,8 @@
     transform: translateY(0);
     transition: 0.2s;
     visibility: visible;
+    z-index: 90;
+    overflow-x: hidden;
 }
 
 .nav-link.cerrado {
@@ -43,14 +47,6 @@
 .logo-svg {
     width: 200px;
     height: auto;
-}
-
-.contenedor-filtro {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 10px;
-    left: 35px;
 }
 
 .contenedor-filtro {
@@ -128,4 +124,31 @@
     background-color: white;
     padding-inline: 20px;
     border-radius: 5px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .logo-svg {
+        width: 120px;
+    }
+
+    .contenedor-filtro {
+        left: 15px;
+    }
+
+    .contenedor-link ul {
+        gap: 20px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .contenedor-link a {
+        font-size: 16px;
+    }
+
+    .nav-link {
+        height: auto;
+        max-height: 200px;
+        overflow-y: auto;
+    }
 }
