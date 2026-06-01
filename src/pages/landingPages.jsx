@@ -2,9 +2,9 @@ import NavBar from "../components/navBar";
 import '../App.css';
 import { useState, useEffect } from "react";
 import imagenes from '../assets/imagenes'
-import ContenedorPresentacion from "../components/contenedorPresentacion";
-import OptionsPresentacion from "../components/optionsPresentacion";
 import videos from '../assets/videos';
+
+import ContenedorPresentacion from "../components/contenedorPresentacion";
 
 function LadingPages() {
     const [index, setIndex] = useState(0);
@@ -17,7 +17,7 @@ function LadingPages() {
         setIndex((prev) => (prev === imagenes.length - 1 ? 0 : prev + 1));
     };
 
-    useEffect(() => { 
+    useEffect(() => {
         const timer = setTimeout(() => {
             handleNext();
         }, 5000);
@@ -52,14 +52,28 @@ function LadingPages() {
                     </div>
                 </div>
 
-                {videos.map((video, i) => (
-                    <ContenedorPresentacion
-                        key={i}
-                        video={video.video}
-                        titulo={video.titulo}
-                        descripcion={video.descripcion}
-                    />
-                ))}
+                <section className="contenedor-presentacion-slider">
+                    
+                    {videos.map((video, i) => (
+                        <ContenedorPresentacion
+                            key={i}
+                            video={video.video}
+                            titulo={video.titulo}
+                            descripcion={video.descripcion}
+                        />
+                    ))}
+
+                </section>
+
+                <section className="contenedor-productos-slider">
+
+                </section>
+
+                <section className="contenedor-experiencia-usuarios">
+
+                </section>
+
+
 
             </main>
 

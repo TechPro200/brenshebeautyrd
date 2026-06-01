@@ -7,7 +7,7 @@ function ContenedorPresentacion(props) {
         <div className="contenedor-presentacion">
 
             <div className="contenedor-imagen-presentacion">
-                <video src={video} controls autoPlay loop ></video>
+                <video src={video} controls  loop ></video>
             </div>
 
             <div className="contenedor-info-presentacion">
