@@ -2,9 +2,9 @@ import NavBar from "../components/navBar";
 import '../App.css';
 import { useState, useEffect } from "react";
 import imagenes from '../assets/imagenes'
-import videos from '../assets/videos';
-
+import Footer from "../components/footer";
 import ContenedorPresentacion from "../components/contenedorPresentacion";
+import OptionsPresentacion from "../components/optionsPresentacion";
 
 function LadingPages() {
     const [index, setIndex] = useState(0);
@@ -41,6 +41,7 @@ function LadingPages() {
                         </button>
                     </div>
                     <div className="contendor-imagen">
+
                         {imagenes.map((imagenes, i) => (
                             <img
                                 key={i}
@@ -49,33 +50,43 @@ function LadingPages() {
                                 src={imagenes}
                                 alt={`imagenes ${i + 1}`}
                             />))}
+
                     </div>
                 </div>
 
-                <section className="contenedor-presentacion-slider">
-                    
-                    {videos.map((video, i) => (
-                        <ContenedorPresentacion
-                            key={i}
-                            video={video.video}
-                            titulo={video.titulo}
-                            descripcion={video.descripcion}
-                        />
-                    ))}
+                <section>
+                    <header >
+                        <h2>Videos</h2>
+                    </header>
+
+                    <ContenedorPresentacion />
 
                 </section>
 
-                <section className="contenedor-productos-slider">
+                <section >
+                    <header >
+                        <h2>Nuestros Productos</h2>
+                    </header>
+
+                    <OptionsPresentacion />
 
                 </section>
 
-                <section className="contenedor-experiencia-usuarios">
+                <section >
+                    <header >
+                        <h2>Experiencia de Nuestros Clientes</h2>
+                    </header>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque porro in ad ex rem? Unde aliquam dolores soluta sequi, illum, consectetur magni quaerat, nihil quia architecto libero eveniet quas facere.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque porro in ad ex rem? Unde aliquam dolores soluta sequi, illum, consectetur magni quaerat, nihil quia architecto libero eveniet quas facere.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque porro in ad ex rem? Unde aliquam dolores soluta sequi, illum, consectetur magni quaerat, nihil quia architecto libero eveniet quas facere.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque porro in ad ex rem? Unde aliquam dolores soluta sequi, illum, consectetur magni quaerat, nihil quia architecto libero eveniet quas facere.</p>
 
                 </section>
-
-
 
             </main>
+
+            <Footer />
 
         </>
 

@@ -10,44 +10,44 @@ import video7 from '../assets/videos/video7.mp4'
 const videospresentacion = [
     {
         video: video1,
-        titulo: 'Crema blanqueadora',
-        descripcion: 'Con esta crema el diablo te busca'
+        alt: 'Crema blanqueadora',
+
     },
 
     {
         video: video2,
-        titulo: 'Crema blanqueadora',
-        descripcion: 'Con esta cr2323232323ema el diablo te busca'
+        alt: 'Crema blanqueadora',
+
     },
 
     {
         video: video3,
-        titulo: 'Crema blanqueadora',
-        descripcion: 'Con esta crema el diablo te busca'
+        alt: 'Crema blanqueadora',
+
     },
 
     {
         video: video4,
-        titulo: 'Crema blanqueadora',
-        descripcion: 'Con esta crema el diablo te busca'
+        alt: 'Crema blanqueadora',
+
     },
 
     {
         video: video5,
-        titulo: 'Crema blanqueadora',
-        descripcion: 'Con esta crema el diablo te busca'
+        alt: 'Crema blanqueadora',
+
     },
 
     {
         video: video6,
-        titulo: 'Crema blanqueadora',
-        descripcion: 'Con esta crema el diablo te busca'
+        alt: 'Crema blanqueadora',
+
     },
 
     {
         video: video7,
-        titulo: 'Crema blanqueadora',
-        descripcion: 'Con esta crema el diablo te busca'
+        alt: 'Crema blanqueadora',
+
     }
 ]
 

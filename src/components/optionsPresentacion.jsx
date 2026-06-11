@@ -1,45 +1,26 @@
 import '../components/optionsPresentacion.css';
-function OptionsPresentacion(props) {
-    const { imagen, titulo, descripcion } = props;
+import productos from '../assets/productosPresentacion';
+
+function OptionsPresentacion() {
 
     return (
-        <div className="contenedor-presentacion-opciones">
-            <div className="contenedor-producto">
-                <div className="contenedor-imagen">
-                    <img src={imagen} alt={titulo} />
-                </div>
-                <div className="contendor-botones">
-                    <button className="boton-comprar">Comprar</button>
-                </div>
-                <div className="contenedor-info">
-                    <h1>{titulo}</h1>
-                    <p>{descripcion}</p>
-                </div>
-            </div>
-            <div className="contenedor-producto">
-                <div className="contenedor-imagen">
-                    <img src={imagen} alt={titulo} />
-                </div>
-                <div className="contendor-botones">
-                    <button className="boton-comprar">Comprar</button>
-                </div>
-                <div className="contenedor-info">
-                    <h1>{titulo}</h1>
-                    <p>{descripcion}</p>
-                </div>
-            </div>
-            <div className="contenedor-producto">
-                <div className="contenedor-imagen">
-                    <img src={imagen} alt={titulo} />
-                </div>
-                <div className="contendor-botones">
-                    <button className="boton-comprar">Comprar</button>
-                </div>
-                <div className="contenedor-info">
-                    <h1>{titulo}</h1>
-                    <p>{descripcion}</p>
-                </div>
-            </div>
+        <div className="contenedor-presentacion-grid">
+            {productos.map((producto, i) => {
+                return (
+                    <div key={i} className="contenedor-presentacion-opciones">
+                            <div className="contenedor-info">
+                                <h1>{producto.titulo}</h1>
+                                <p>{producto.descripcion}</p>
+                            </div>
+                            <div className="contenedor-imagen">
+                                <img src={producto.imagen} />
+                            </div>
+                            <div className="contenedor-botones">
+                                <button className="boton-comprar">Comprar</button>
+                            </div>
+                    </div>
+                )
+            })}
         </div>
     )
 }

@@ -1,36 +1,190 @@
+.contenedor-presentacion-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+}
+
 .contenedor-presentacion-opciones {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 40px;
-    margin-inline: 20px;
+    flex-direction: row;
+    width: 25%;
+    max-width: 750px;
+    height: 450px;
+    margin: 45px 25px;
+    padding: 0;
+    background-color: #F6A2AE;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+
 }
 
-.contenedor-producto {
+.contenedor-imagen {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 700px;
-    height: 300px;
-    border-radius: 15px;
+    height: 100%;
     overflow: hidden;
-    box-shadow: -12px 8px 14px 0px rgba(0, 0, 0, 0.3);
-    background-color: #f5f5f5;
 }
 
-/* Mobile responsive */
+.contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.contenedor-imagen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 -15%, #00000000 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.contenedor-presentacion-opciones:hover .contenedor-imagen::after {
+    opacity: 1;
+}
+
+.contenedor-presentacion-opciones:hover .contenedor-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor-presentacion-opciones:hover {
+    transform: scale(1.05);
+}
+
+.contenedor-presentacion-opciones:hover .contenedor-botones {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+.boton-comprar {
+    background-color: #f41b3c;
+    color: white;
+    border: none;
+    width: 250px;
+    height: 65px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.contenedor-info h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.contenedor-info p {
+    font-size: 1.125rem;
+    color: white;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .contenedor-presentacion-opciones {
-        gap: 25px;
-        margin-inline: 10px;
-        margin-top: 25px;
+        width: 100%;
+        max-width: 550px;
+        height: 500px;
+        margin: 30px auto;
     }
 
-    .contenedor-producto {
-        height: 250px;
+    .contenedor-info h1 {
+        font-size: 2rem;
+    }
+
+    .contenedor-info p {
+        font-size: 1rem;
+    }
+
+    .boton-comprar {
+        width: 200px;
+        height: 55px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-presentacion-opciones {
+        width: 100%;
+        max-width: 100%;
+        height: 400px;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .contenedor-info h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    .contenedor-info p {
+        font-size: 0.875rem;
+    }
+
+    .boton-comprar {
+        width: 160px;
+        height: 45px;
+        font-size: 14px;
+        padding: 8px 15px;
     }
 }

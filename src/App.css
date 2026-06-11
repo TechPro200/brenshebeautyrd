@@ -1,7 +1,8 @@
 /*Formato General*/
 main {
     padding: 0;
-    width: 100%;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 /*--Formato Genera--*/
@@ -20,7 +21,6 @@ main {
     position: relative;
     background-color: aliceblue;
     height: 30rem;
-    box-shadow: 12px 8px 14px 0px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
@@ -88,6 +88,21 @@ main {
     opacity: 1;
 }
 
+header {
+    background-color: #F6A2AE;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    h2 {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 35px;
+    }
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     .contenedor-landing {
@@ -109,3 +124,297 @@ main {
 }
 
 /*--LanginPages--*/
+
+/*--Catalogo--*/
+.contenedor-catalogo {
+    background: linear-gradient(126deg, #ffffff 1%, #b3b3b3 85%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1300px;
+    padding-top: 100px;
+}
+
+.contenedor-caja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenedor-buscador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto 30px;
+    padding: 30px 20px;
+}
+
+.contenedor-buscador div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    position: relative;
+    top: 0;
+    flex-wrap: wrap;
+}
+
+.contenedor-buscador svg {
+    position: absolute;
+    z-index: auto;
+    width: 20px;
+    height: auto;
+    top: 50%;
+    left: 95px;
+    transform: translateY(-50%);
+    stroke: rgb(0, 0, 0);
+}
+
+.contenedor-buscador form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input-buscar {
+    width: 100%;
+    max-width: 500px;
+    height: 38px;
+    padding: 10px 15px 10px 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-buscar:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-buscar {
+    width: 90px;
+    height: 38px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #E95D25;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button-buscar:hover {
+    background-color: #D74A1A;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px 20px;
+    margin: 0 auto 35px;
+}
+
+.contendor-producto-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    auto-rows: 250px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .contendor-producto-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        auto-rows: 220px;
+    }
+
+    .contenedor-buscador svg {
+        position: absolute;
+        z-index: auto;
+        top: 1;
+        left: 35px;
+    }
+}
+
+/* Mobile Medium */
+@media (max-width: 500px) {
+    .contenedor-catalogo {
+        padding-top: 80px;
+    }
+
+    .contenedor-buscador {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .contenedor-buscador div {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        top: 0;
+    }
+
+    .contenedor-buscador form {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-buscar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .button-buscar {
+        width: 100px;
+    }
+
+    .contenedor-buscador svg {
+        position: absolute;
+        z-index: auto;
+        top: 40px;
+        left: 35px;
+    }
+
+    .contenedor-productos {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .contendor-producto-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        auto-rows: 200px;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 320px) {
+    .contenedor-catalogo {
+        padding-top: 70px;
+    }
+
+    .contenedor-buscador {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .input-buscar {
+        width: 100%;
+        max-width: 100%;
+        height: 35px;
+        margin: 5px 0;
+    }
+
+    .button-buscar {
+        width: 80px;
+        height: 35px;
+    }
+
+    .contenedor-productos {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    .contendor-producto-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        auto-rows: 180px;
+    }
+
+    .contenedor-titulo-card h2 {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .contenedor-buscador svg {
+        position: absolute;
+        z-index: auto;
+        top: 43px;
+        left: 30px;
+    }
+}
+
+/*--Catalogo--*/
+
+/*--Detalle--*/
+.contenedor-error-detalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0;
+    height: 100vh;
+}
+
+.contenedor-error-detalle h1 {
+    font-weight: bold;
+    font-size: 150px;
+    margin-right: 35px;
+}
+
+.contenedor-error-detalle span {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.contenedor-detalle-producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.contendor-detalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+    background-color: #D74A1A;
+    margin-inline: 35px;
+}
+
+.contendor-detalle .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 30rem;
+    background-color: aqua;
+    overflow: hidden;
+    margin-right: 150px;
+}
+
+.contendor-detalle .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contendor-detalle .rigth {
+    margin-right: 250px;
+}
+
+/*--Detalle--*/

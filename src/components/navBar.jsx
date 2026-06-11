@@ -4,13 +4,13 @@ import { useState } from 'react';
 
 function NavBar() {
     const [menu, setMenu] = useState(true)
-    
+
 
     return (
         <header>
             <nav className='nav-main'>
 
-            <div className='contenedor-nav'>
+                <div className='contenedor-nav'>
 
                     <div className="contenedor-filtro">
 
@@ -29,9 +29,9 @@ function NavBar() {
 
                     </div>
 
-                <div className='contenedor-logo-nav'>
+                    <div className='contenedor-logo-nav'>
 
-                    <a title='Pagina de inicio'>
+                        <a title='Pagina de inicio'>
                             <svg className='logo-svg' viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
                                 <text
                                     x="50%"
@@ -46,7 +46,7 @@ function NavBar() {
                                     Brénshe
                                 </text>
                             </svg>
-                    </a>
+                        </a>
 
                     </div>
 
@@ -59,14 +59,22 @@ function NavBar() {
                 <div className='contenedor-link'>
 
                     <ul>
-                        <Link to='/'>Inicio</Link>
-                        <Link to='/catalogo'>Tienda</Link>
-                        <Link to='/about'>Sobre mi</Link>
+                        <div>
+                            <Link to='/'>Inicio</Link>
+                        </div>
+
+                        <div>
+                            <Link to='/catalogo'>Tienda</Link>
+                        </div>
+
+                        <div>
+                            <Link to='/about'>Sobre mi</Link>
+                        </div>
                     </ul>
 
                 </div>
 
-        </nav>
+            </nav>
 
 
         </header>
