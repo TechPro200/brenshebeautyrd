@@ -15,7 +15,7 @@ const Productos = [
     {
         id: 2,
         imagen: imagen2,
-        titulo: "Producto 2",
+        titulo: "Fogarate",
         descripcion: "Descripción del producto 2",
         stock: 15,
         precio: 1000,
